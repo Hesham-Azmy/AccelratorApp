@@ -1,0 +1,17 @@
+{
+  "name": "mern-todo",
+  "version": "1.0.0",
+  "main": "",
+  "scripts": {
+    "postinstall": "cd frontend && npm i && cd ../backend && npm i",
+    "run-cypress": "cypress run",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm start",
+    "both": "start-test backend http://localhost:4000/todos frontend",
+    "test": "start-server-and-test both http://localhost:3000 run-cypress"
+  },
+  "devDependencies": {
+    "cypress": "^3.8.0",
+    "start-server-and-test": "^1.10.6"
+  }
+}
